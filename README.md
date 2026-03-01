@@ -1,4 +1,4 @@
-# Experimental EtherNet/IP Scanner Stack v(0.1.0)
+# Experimental EtherNet/IP Scanner Stack v(0.2.0)
 
 This project provides an experimental EtherNet/IP scanner implementation designed to turn a Python-hosted application into a functional EtherNet/IP I/O device. It is intended for student use, academic work, laboratory environments, and internal research and development (R&D).
 
@@ -32,7 +32,6 @@ The current release targets Linux and Windows platforms. LLDP object behavior is
 ### Object Set
 Implements the following CIP objects:
 - Identity (0x01)
-- Assembly (0x04)
 - Connection Manager (0x06)
 - TCP/IP Interface (0xF5)
 - Ethernet Link (0xF6)

@@ -11,8 +11,6 @@ from .Public import Remove
 from .Public import Reset
 from .Public import Inhibit
 from .Public import Run
-from .Public import Send_Header
-from .Public import Receive_Header
 from .Public import Start
 from .Public import Stop
 from .Public import Log

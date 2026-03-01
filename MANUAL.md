@@ -32,7 +32,7 @@ Stops all protocol threads and closes network sockets.
 
 #### `Register(Event, Callback)`
 Registers a user function to handle specific events.
-*   **Event** (`str`): One of `'IO'`, `'Assembly'`, `'TCPIP'`, `'Ethernet'`, `'LLDP'`, `'QoS'`, `'Reset'`, `'LED'`.
+*   **Event** (`str`): One of `'IO'`, `'TCPIP'`, `'Ethernet'`, `'LLDP'`, `'QoS'`, `'Reset'`, `'LED'`.
 *   **Callback** (`func`): Function taking a single argument (`Data`).
 
 ---
@@ -42,16 +42,16 @@ Registers a user function to handle specific events.
 #### `Add(Name, Datatype='USINT', ...)`
 Defines a virtual adapter (I/O Assembly Set).
 *   **Name** (`str`): Unique identifier.
-*   **Datatype** (`str`): Element type (`'USINT'`,`'UINT'`,`'UDINT'`,`'SINT'`,`'INT'`,`'DINT'`,`'REAL'`).
-*   **Inputs** (`int`): Size of Input Assembly (Produced TO PLC).
-*   **Outputs** (`int`): Size of Output Assembly (Consumed FROM PLC).
-*   **Configs** (`int`): Size of Configuration Assembly (BYTES Only).
-*   **Input_Instance** (`int`): CIP Instance ID (Default: 100).
-*   **Output_Instance** (`int`): CIP Instance ID (Default: 101).
+*   **Datatype** (`str`): Element type (`'USINT'`, `'UINT'`, `'UDINT'`, `'SINT'`, `'INT'`, `'DINT'`, `'REAL'`).
+*   **T_O_Length** (`int`): Size of Input Assembly (Produced TO PLC).
+*   **O_T_Length** (`int`): Size of Output Assembly (Consumed FROM PLC).
+*   **Config_Length** (`int`): Size of Configuration Assembly (BYTES Only).
+*   **T_O_Instance** (`int`): CIP Instance ID (Default: 100).
+*   **O_T_Instance** (`int`): CIP Instance ID (Default: 101).
 *   **Config_Instance** (`int`): CIP Instance ID (Default: 102).
 *   **T_O_RPI** / **O_T_RPI** (`int`): Default RPIs in microseconds.
 *   **Inhibit** (`bool`): Start inhibited (Default: `False`).
-*   **Receive_Header** / **Send_Header** (`bool`): Include 32-bit Run/Idle header in data.
+*   **T_O_Header** / **O_T_Header** (`bool`): Include 32-bit Run/Idle header in data.
 *   **Unicast** (`bool`): Unicast connection (Default: `True`).
 *   **Trigger** (`str`): Type of Implicit connection Trigger, Cyclic, COS (Default: `Cyclic`).
 *   **Connection_Type** (`str`): Type of Implicit connection, Exclusive_Owner, Inpus_Only, Listen_Only (Default: `Exclusive_Owner`).

@@ -48,15 +48,14 @@ def Random_List(Length, Start, Stop):
 Scanner.Config(IP='192.168.17.17')
 Scanner.Register('IO', IO)
 Scanner.Register('Config', Config)
-Scanner.Register('Assembly', Config)
 Scanner.Register('TCPIP', Config)
 Scanner.Register('Ethernet', Config)
 Scanner.Register('Reset', Config)
 Scanner.Register('LED', Config)
 Scanner.Register('LLDP', Config)
 Scanner.Register('QoS', Config)
-Scanner.Add(Name='A', Datatype='UDINT', Inputs=6, Outputs=6, Configs=6, Input_Instance=100, Output_Instance=101, Config_Instance=102, Inhibit=False, Receive_Header=True, Send_Header=True, Run=True, Unicast=False, Implicit=True, Connected_Explicit=True, Connected_Explicit_Time=1000)
-Scanner.Add(Name='B', Datatype='USINT', Inputs=64, Outputs=64, Configs=32, Input_Instance=150, Output_Instance=151, Config_Instance=152, Inhibit=False, Receive_Header=False, Send_Header=False, Run=True))
+Scanner.Add(Name='A', IP='192.168.7.11', Datatype='UDINT', T_O_Length=4, O_T_Length=8, Config_Length=6, T_O_Instance=100, O_T_Instance=101, Config_Instance=102, T_O_RPI=100000, O_T_RPI=100000, Inhibit=False, T_O_Header=True, O_T_Header=True, Run=True, Unicast=False, Implicit=True, Connected_Explicit=True, Connected_Explicit_Time=1000)
+Scanner.Add(Name='B', IP='192.168.7.11', Datatype='USINT', T_O_Length=64, O_T_Length=64, Config_Length=32, T_O_Instance=150, O_T_Instance=151, Config_Instance=152, T_O_RPI=200000, O_T_RPI=200000, Inhibit=False, T_O_Header=False, O_T_Header=False, Run=True)
 ```
 
 ### 4. Start & Runtime Loop
@@ -66,6 +65,6 @@ Scanner.Start()
 
 while True:
     time.sleep(0.01)
-    Scanner.Write('A', Random_List(6, 1, 30))
-    Scanner.Write('B', Random_List(64, 2, 60))
+    Scanner.Write('A', Random_List(8, 31, 40))
+    Scanner.Write('B', Random_List(64, 41, 50))
 ```
