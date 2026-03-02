@@ -1,4 +1,4 @@
-# Experimental EtherNet/IP Scanner Stack v(0.2.0)
+# Experimental EtherNet/IP Scanner Stack v(0.3.0)
 
 This project provides an experimental EtherNet/IP scanner implementation designed to turn a Python-hosted application into a functional EtherNet/IP I/O device. It is intended for student use, academic work, laboratory environments, and internal research and development (R&D).
 

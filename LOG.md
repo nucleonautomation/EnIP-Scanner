@@ -1,5 +1,10 @@
 # Change Log
 
+## V(0.3.0)
+- EnIP Watchdog Optimizations
+- EnIP Separate Sockets For UDP Tx & Rx
+- EnIP IP To Interface Automatic Resolver
+
 ## V(0.2.0)
 - EnIP Optimization For Better Use OF ThreadFree Python & For ODVA Complience
 - EnIP Setup Add Method, Arg Names Changed For Better Understanding
