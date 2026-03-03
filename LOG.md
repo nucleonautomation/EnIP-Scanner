@@ -1,5 +1,12 @@
 # Change Log
 
+## V(0.4.0)
+- EnIP Large Forward Open Bug Fixes
+- EnIP Update Method To Change Adapter Configs When Inhibited
+- EnIP Listen_Only & Input_Only Bug Fixes
+- EnIP Scanner Added Electronic Keying
+- EnIP Remove Unwanted State Variables
+
 ## V(0.3.0)
 - EnIP Watchdog Optimizations
 - EnIP Separate Sockets For UDP Tx & Rx

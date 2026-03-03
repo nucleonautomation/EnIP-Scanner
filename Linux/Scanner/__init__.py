@@ -7,6 +7,7 @@ from .Public import Search
 from .Public import Register
 from .Public import Config
 from .Public import Add
+from .Public import Update
 from .Public import Remove
 from .Public import Reset
 from .Public import Inhibit
